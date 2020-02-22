@@ -66,4 +66,8 @@ def main():
     tree.create_nodes(node_size=5)
     assert(tree.compute_height()) == 4
 
+    tree = TreeHeight(parents=[8, 8, 5, 6, 7, 3, 1, 6, -1, 5])
+    tree.create_nodes(node_size=10)
+    assert(tree.compute_height()) == 6
+
 threading.Thread(target=main).start()
